@@ -31,16 +31,16 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaHistoriaClinica));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,8 +48,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.TabHistoria = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnImprimir = new System.Windows.Forms.Button();
+            this.BtnFusionar = new System.Windows.Forms.Button();
             this.dgvAtenciones = new System.Windows.Forms.DataGridView();
             this.CuentaCorriente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -141,6 +141,9 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.BtnOrdenes = new System.Windows.Forms.Button();
+            this.BtnFiltrarAtencion = new System.Windows.Forms.Button();
+            this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -230,8 +233,10 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.BtnFiltrarAtencion);
+            this.tabPage1.Controls.Add(this.BtnOrdenes);
+            this.tabPage1.Controls.Add(this.BtnImprimir);
+            this.tabPage1.Controls.Add(this.BtnFusionar);
             this.tabPage1.Controls.Add(this.dgvAtenciones);
             this.tabPage1.Controls.Add(this.BtnFiltrar);
             this.tabPage1.Controls.Add(this.dgvListaPaciente);
@@ -244,52 +249,52 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.tabPage1.Text = "Listado de Pacientes";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BtnImprimir
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(448, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 26);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "      Imprimir Hoja Afiliación";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnImprimir.BackColor = System.Drawing.Color.Transparent;
+            this.BtnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnImprimir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnImprimir.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BtnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("BtnImprimir.Image")));
+            this.BtnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnImprimir.Location = new System.Drawing.Point(257, 7);
+            this.BtnImprimir.Name = "BtnImprimir";
+            this.BtnImprimir.Size = new System.Drawing.Size(83, 26);
+            this.BtnImprimir.TabIndex = 62;
+            this.BtnImprimir.Text = "Afiliación";
+            this.BtnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnImprimir.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // BtnFusionar
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(277, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 26);
-            this.button2.TabIndex = 61;
-            this.button2.Text = "Fusión de Historias Clínicas";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnFusionar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnFusionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFusionar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnFusionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFusionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFusionar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BtnFusionar.Image = ((System.Drawing.Image)(resources.GetObject("BtnFusionar.Image")));
+            this.BtnFusionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnFusionar.Location = new System.Drawing.Point(174, 7);
+            this.BtnFusionar.Name = "BtnFusionar";
+            this.BtnFusionar.Size = new System.Drawing.Size(75, 26);
+            this.BtnFusionar.TabIndex = 61;
+            this.BtnFusionar.Text = "Fusionar";
+            this.BtnFusionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnFusionar.UseVisualStyleBackColor = false;
             // 
             // dgvAtenciones
             // 
             this.dgvAtenciones.AllowUserToAddRows = false;
             this.dgvAtenciones.AllowUserToDeleteRows = false;
             this.dgvAtenciones.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            this.dgvAtenciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.dgvAtenciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvAtenciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -297,14 +302,14 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.dgvAtenciones.BackgroundColor = System.Drawing.Color.White;
             this.dgvAtenciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAtenciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAtenciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAtenciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvAtenciones.ColumnHeadersHeight = 35;
             this.dgvAtenciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CuentaCorriente,
@@ -337,33 +342,33 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.idusuarioCreacionDataGridViewTextBoxColumn1,
             this.idusuarioModificaDataGridViewTextBoxColumn1});
             this.dgvAtenciones.DataSource = this.ETAtencionesBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAtenciones.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAtenciones.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgvAtenciones.EnableHeadersVisualStyles = false;
             this.dgvAtenciones.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvAtenciones.Location = new System.Drawing.Point(9, 313);
+            this.dgvAtenciones.Location = new System.Drawing.Point(9, 401);
             this.dgvAtenciones.MultiSelect = false;
             this.dgvAtenciones.Name = "dgvAtenciones";
             this.dgvAtenciones.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAtenciones.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAtenciones.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvAtenciones.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAtenciones.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAtenciones.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvAtenciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAtenciones.Size = new System.Drawing.Size(1132, 294);
+            this.dgvAtenciones.Size = new System.Drawing.Size(1132, 206);
             this.dgvAtenciones.TabIndex = 58;
             this.dgvAtenciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAtenciones_CellContentClick);
             // 
@@ -616,11 +621,11 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.BtnFiltrar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BtnFiltrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnFiltrar.Image")));
             this.BtnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnFiltrar.Location = new System.Drawing.Point(146, 7);
+            this.BtnFiltrar.Location = new System.Drawing.Point(81, 7);
             this.BtnFiltrar.Name = "BtnFiltrar";
-            this.BtnFiltrar.Size = new System.Drawing.Size(125, 26);
+            this.BtnFiltrar.Size = new System.Drawing.Size(86, 26);
             this.BtnFiltrar.TabIndex = 54;
-            this.BtnFiltrar.Text = "Filtro o Búsqueda";
+            this.BtnFiltrar.Text = "Búsqueda";
             this.BtnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnFiltrar.UseVisualStyleBackColor = false;
             this.BtnFiltrar.Click += new System.EventHandler(this.BtnFiltrar_Click);
@@ -630,25 +635,25 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.dgvListaPaciente.AllowUserToAddRows = false;
             this.dgvListaPaciente.AllowUserToDeleteRows = false;
             this.dgvListaPaciente.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            this.dgvListaPaciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.dgvListaPaciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvListaPaciente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListaPaciente.AutoGenerateColumns = false;
             this.dgvListaPaciente.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvListaPaciente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListaPaciente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListaPaciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListaPaciente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvListaPaciente.ColumnHeadersHeight = 35;
             this.dgvListaPaciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Secuencia,
@@ -706,33 +711,33 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.idusuarioCreacionDataGridViewTextBoxColumn,
             this.idusuarioModificaDataGridViewTextBoxColumn});
             this.dgvListaPaciente.DataSource = this.ETHCbindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListaPaciente.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListaPaciente.DefaultCellStyle = dataGridViewCellStyle28;
             this.dgvListaPaciente.EnableHeadersVisualStyles = false;
             this.dgvListaPaciente.GridColor = System.Drawing.SystemColors.Control;
             this.dgvListaPaciente.Location = new System.Drawing.Point(9, 38);
             this.dgvListaPaciente.MultiSelect = false;
             this.dgvListaPaciente.Name = "dgvListaPaciente";
             this.dgvListaPaciente.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListaPaciente.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListaPaciente.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dgvListaPaciente.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvListaPaciente.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvListaPaciente.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvListaPaciente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaPaciente.Size = new System.Drawing.Size(1129, 269);
+            this.dgvListaPaciente.Size = new System.Drawing.Size(1129, 327);
             this.dgvListaPaciente.TabIndex = 52;
             this.dgvListaPaciente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaPaciente_CellContentClick_1);
             // 
@@ -1185,10 +1190,10 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnNuevo.Location = new System.Drawing.Point(3, 7);
             this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(144, 26);
+            this.BtnNuevo.Size = new System.Drawing.Size(78, 26);
             this.BtnNuevo.TabIndex = 53;
-            this.BtnNuevo.Text = "      Nueva Historia Clínica";
-            this.BtnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnNuevo.Text = " Afiliación";
+            this.BtnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnNuevo.UseVisualStyleBackColor = false;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
@@ -1211,6 +1216,47 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "(E-2) Listado de Citas";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // BtnOrdenes
+            // 
+            this.BtnOrdenes.BackColor = System.Drawing.Color.Transparent;
+            this.BtnOrdenes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnOrdenes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOrdenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOrdenes.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BtnOrdenes.Image = ((System.Drawing.Image)(resources.GetObject("BtnOrdenes.Image")));
+            this.BtnOrdenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnOrdenes.Location = new System.Drawing.Point(96, 371);
+            this.BtnOrdenes.Name = "BtnOrdenes";
+            this.BtnOrdenes.Size = new System.Drawing.Size(79, 26);
+            this.BtnOrdenes.TabIndex = 63;
+            this.BtnOrdenes.Text = "Ordenes";
+            this.BtnOrdenes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnOrdenes.UseVisualStyleBackColor = false;
+            // 
+            // BtnFiltrarAtencion
+            // 
+            this.BtnFiltrarAtencion.BackColor = System.Drawing.Color.Transparent;
+            this.BtnFiltrarAtencion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFiltrarAtencion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnFiltrarAtencion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFiltrarAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFiltrarAtencion.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BtnFiltrarAtencion.Image = ((System.Drawing.Image)(resources.GetObject("BtnFiltrarAtencion.Image")));
+            this.BtnFiltrarAtencion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnFiltrarAtencion.Location = new System.Drawing.Point(9, 371);
+            this.BtnFiltrarAtencion.Name = "BtnFiltrarAtencion";
+            this.BtnFiltrarAtencion.Size = new System.Drawing.Size(86, 26);
+            this.BtnFiltrarAtencion.TabIndex = 64;
+            this.BtnFiltrarAtencion.Text = "Búsqueda";
+            this.BtnFiltrarAtencion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnFiltrarAtencion.UseVisualStyleBackColor = false;
+            // 
+            // ttMensaje
+            // 
+            this.ttMensaje.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttMensaje.ToolTipTitle = ".:: Información de la acción";
             // 
             // frmListaHistoriaClinica
             // 
@@ -1337,7 +1383,10 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioActualDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idusuarioCreacionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idusuarioModificaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnFusionar;
+        private System.Windows.Forms.Button BtnImprimir;
+        private System.Windows.Forms.Button BtnFiltrarAtencion;
+        private System.Windows.Forms.Button BtnOrdenes;
+        private System.Windows.Forms.ToolTip ttMensaje;
     }
 }

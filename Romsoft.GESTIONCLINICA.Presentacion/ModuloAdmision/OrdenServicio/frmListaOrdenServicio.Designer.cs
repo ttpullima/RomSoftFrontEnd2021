@@ -38,14 +38,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvListaProfesional = new System.Windows.Forms.DataGridView();
-            this.ETProfesional = new System.Windows.Forms.BindingSource(this.components);
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.PctSalir = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionmedicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +46,14 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.TipoAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Comprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ETProfesional = new System.Windows.Forms.BindingSource(this.components);
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.PctSalir = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProfesional)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ETProfesional)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,7 +79,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.btnFiltrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnFiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnFiltrar.Image")));
             this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltrar.Location = new System.Drawing.Point(206, 44);
+            this.btnFiltrar.Location = new System.Drawing.Point(797, 179);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(97, 26);
             this.btnFiltrar.TabIndex = 37;
@@ -136,13 +136,72 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvListaProfesional.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvListaProfesional.Location = new System.Drawing.Point(6, 76);
+            this.dgvListaProfesional.Location = new System.Drawing.Point(597, 211);
             this.dgvListaProfesional.MultiSelect = false;
             this.dgvListaProfesional.Name = "dgvListaProfesional";
             this.dgvListaProfesional.ReadOnly = true;
             this.dgvListaProfesional.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaProfesional.Size = new System.Drawing.Size(991, 448);
+            this.dgvListaProfesional.Size = new System.Drawing.Size(354, 277);
             this.dgvListaProfesional.TabIndex = 34;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // descripcionmedicoDataGridViewTextBoxColumn
+            // 
+            this.descripcionmedicoDataGridViewTextBoxColumn.DataPropertyName = "descripcion_medico";
+            this.descripcionmedicoDataGridViewTextBoxColumn.HeaderText = "Historia";
+            this.descripcionmedicoDataGridViewTextBoxColumn.Name = "descripcionmedicoDataGridViewTextBoxColumn";
+            this.descripcionmedicoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionmedicoDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // generoDataGridViewTextBoxColumn
+            // 
+            this.generoDataGridViewTextBoxColumn.DataPropertyName = "genero";
+            this.generoDataGridViewTextBoxColumn.HeaderText = "Cuenta Corriente";
+            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
+            this.generoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "Paciente";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.estadoDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // TipoPaciente
+            // 
+            this.TipoPaciente.HeaderText = "Tipo Paciente";
+            this.TipoPaciente.Name = "TipoPaciente";
+            this.TipoPaciente.ReadOnly = true;
+            // 
+            // TipoAtencion
+            // 
+            this.TipoAtencion.HeaderText = "Tipo Atención";
+            this.TipoAtencion.Name = "TipoAtencion";
+            this.TipoAtencion.ReadOnly = true;
+            // 
+            // Comprobante
+            // 
+            this.Comprobante.HeaderText = "Comprobante";
+            this.Comprobante.Name = "Comprobante";
+            this.Comprobante.ReadOnly = true;
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Ver Detalle";
+            this.Edit.Image = global::Romsoft.GESTIONCLINICA.Presentacion.Properties.Resources.Editar2;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.ToolTipText = "Editar Registro";
+            this.Edit.Width = 65;
             // 
             // ETProfesional
             // 
@@ -157,7 +216,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(6, 44);
+            this.btnNuevo.Location = new System.Drawing.Point(597, 179);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(97, 26);
             this.btnNuevo.TabIndex = 36;
@@ -232,71 +291,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(106, 44);
+            this.button1.Location = new System.Drawing.Point(697, 179);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 26);
             this.button1.TabIndex = 52;
             this.button1.Text = "      Hoja Cálculo";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // descripcionmedicoDataGridViewTextBoxColumn
-            // 
-            this.descripcionmedicoDataGridViewTextBoxColumn.DataPropertyName = "descripcion_medico";
-            this.descripcionmedicoDataGridViewTextBoxColumn.HeaderText = "Historia";
-            this.descripcionmedicoDataGridViewTextBoxColumn.Name = "descripcionmedicoDataGridViewTextBoxColumn";
-            this.descripcionmedicoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descripcionmedicoDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // generoDataGridViewTextBoxColumn
-            // 
-            this.generoDataGridViewTextBoxColumn.DataPropertyName = "genero";
-            this.generoDataGridViewTextBoxColumn.HeaderText = "Cuenta Corriente";
-            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
-            this.generoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "Paciente";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.estadoDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // TipoPaciente
-            // 
-            this.TipoPaciente.HeaderText = "Tipo Paciente";
-            this.TipoPaciente.Name = "TipoPaciente";
-            this.TipoPaciente.ReadOnly = true;
-            // 
-            // TipoAtencion
-            // 
-            this.TipoAtencion.HeaderText = "Tipo Atención";
-            this.TipoAtencion.Name = "TipoAtencion";
-            this.TipoAtencion.ReadOnly = true;
-            // 
-            // Comprobante
-            // 
-            this.Comprobante.HeaderText = "Comprobante";
-            this.Comprobante.Name = "Comprobante";
-            this.Comprobante.ReadOnly = true;
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Ver Detalle";
-            this.Edit.Image = global::Romsoft.GESTIONCLINICA.Presentacion.Properties.Resources.Editar2;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.ToolTipText = "Editar Registro";
-            this.Edit.Width = 65;
             // 
             // frmListaOrdenServicio
             // 

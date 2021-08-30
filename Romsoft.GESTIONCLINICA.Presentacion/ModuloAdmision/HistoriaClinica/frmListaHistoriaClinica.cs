@@ -25,6 +25,14 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         public frmListaHistoriaClinica()
         {
             InitializeComponent();
+            this.ttMensaje.SetToolTip(this.BtnNuevo, "Afiliar un nuevo paciente");
+            this.ttMensaje.SetToolTip(this.BtnFiltrar, "Filtre o ubique la historia clínica de un paciente");
+            this.ttMensaje.SetToolTip(this.BtnFusionar, "Fusione o traslade las atenciones de una historia clínica a otra");
+            this.ttMensaje.SetToolTip(this.BtnImprimir, "Imprima un copia de la ficha de afiliación de un historia clínica");
+            this.ttMensaje.SetToolTip(this.BtnOrdenes, "Cree nuevas ordenes de servicios a una atención de una paciente");
+            this.ttMensaje.SetToolTip(this.BtnFiltrarAtencion, "Filtre atenciones de un historia clínica");
+
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

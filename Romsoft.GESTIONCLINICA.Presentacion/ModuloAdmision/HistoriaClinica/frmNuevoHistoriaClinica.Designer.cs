@@ -47,9 +47,9 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSiteds = new System.Windows.Forms.Button();
+            this.BtnIntegracionSiteds = new System.Windows.Forms.Button();
             this.lblHistoriaClinica = new System.Windows.Forms.Label();
-            this.btnIntegracionSiteds = new System.Windows.Forms.Button();
+            this.BtnValidacionDNI = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -96,11 +96,11 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cboImprimir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTituloPaciente = new System.Windows.Forms.Label();
             this.errValidator = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -192,7 +192,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // cboSexo
             // 
-            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSexo.ForeColor = System.Drawing.Color.Black;
             this.cboSexo.FormattingEnabled = true;
@@ -215,7 +214,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // cboEstadoCivil
             // 
-            this.cboEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstadoCivil.ForeColor = System.Drawing.Color.Black;
             this.cboEstadoCivil.FormattingEnabled = true;
@@ -238,7 +236,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // cboTDocumento
             // 
-            this.cboTDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTDocumento.ForeColor = System.Drawing.Color.Black;
             this.cboTDocumento.FormattingEnabled = true;
@@ -284,9 +281,9 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.cboTDocumento);
-            this.groupBox1.Controls.Add(this.btnSiteds);
+            this.groupBox1.Controls.Add(this.BtnIntegracionSiteds);
             this.groupBox1.Controls.Add(this.lblHistoriaClinica);
-            this.groupBox1.Controls.Add(this.btnIntegracionSiteds);
+            this.groupBox1.Controls.Add(this.BtnValidacionDNI);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label21);
@@ -301,22 +298,24 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales:";
             // 
-            // btnSiteds
+            // BtnIntegracionSiteds
             // 
-            this.btnSiteds.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSiteds.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSiteds.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSiteds.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiteds.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnSiteds.Image = ((System.Drawing.Image)(resources.GetObject("btnSiteds.Image")));
-            this.btnSiteds.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSiteds.Location = new System.Drawing.Point(562, 29);
-            this.btnSiteds.Name = "btnSiteds";
-            this.btnSiteds.Size = new System.Drawing.Size(124, 27);
-            this.btnSiteds.TabIndex = 42;
-            this.btnSiteds.Text = "       Consulta Siteds";
-            this.btnSiteds.UseVisualStyleBackColor = true;
-            this.btnSiteds.Click += new System.EventHandler(this.btnSiteds_Click);
+            this.BtnIntegracionSiteds.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnIntegracionSiteds.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BtnIntegracionSiteds.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIntegracionSiteds.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIntegracionSiteds.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BtnIntegracionSiteds.Image = ((System.Drawing.Image)(resources.GetObject("BtnIntegracionSiteds.Image")));
+            this.BtnIntegracionSiteds.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnIntegracionSiteds.Location = new System.Drawing.Point(562, 29);
+            this.BtnIntegracionSiteds.Name = "BtnIntegracionSiteds";
+            this.BtnIntegracionSiteds.Size = new System.Drawing.Size(124, 27);
+            this.BtnIntegracionSiteds.TabIndex = 42;
+            this.BtnIntegracionSiteds.Text = "       Consulta Siteds";
+            this.ttMensaje.SetToolTip(this.BtnIntegracionSiteds, "Obtener los datos de identificación del paciente a travez de un documento de auto" +
+        "rización.");
+            this.BtnIntegracionSiteds.UseVisualStyleBackColor = true;
+            this.BtnIntegracionSiteds.Click += new System.EventHandler(this.btnSiteds_Click);
             // 
             // lblHistoriaClinica
             // 
@@ -330,22 +329,23 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.lblHistoriaClinica.TabIndex = 41;
             this.lblHistoriaClinica.Text = "0";
             // 
-            // btnIntegracionSiteds
+            // BtnValidacionDNI
             // 
-            this.btnIntegracionSiteds.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIntegracionSiteds.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnIntegracionSiteds.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIntegracionSiteds.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIntegracionSiteds.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnIntegracionSiteds.Image = ((System.Drawing.Image)(resources.GetObject("btnIntegracionSiteds.Image")));
-            this.btnIntegracionSiteds.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIntegracionSiteds.Location = new System.Drawing.Point(446, 29);
-            this.btnIntegracionSiteds.Name = "btnIntegracionSiteds";
-            this.btnIntegracionSiteds.Size = new System.Drawing.Size(111, 27);
-            this.btnIntegracionSiteds.TabIndex = 34;
-            this.btnIntegracionSiteds.Text = "     Validación DNI";
-            this.btnIntegracionSiteds.UseVisualStyleBackColor = true;
-            this.btnIntegracionSiteds.Click += new System.EventHandler(this.btnIntegracionSiteds_Click);
+            this.BtnValidacionDNI.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnValidacionDNI.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BtnValidacionDNI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnValidacionDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnValidacionDNI.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BtnValidacionDNI.Image = ((System.Drawing.Image)(resources.GetObject("BtnValidacionDNI.Image")));
+            this.BtnValidacionDNI.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnValidacionDNI.Location = new System.Drawing.Point(446, 29);
+            this.BtnValidacionDNI.Name = "BtnValidacionDNI";
+            this.BtnValidacionDNI.Size = new System.Drawing.Size(111, 27);
+            this.BtnValidacionDNI.TabIndex = 34;
+            this.BtnValidacionDNI.Text = "     Validación DNI";
+            this.ttMensaje.SetToolTip(this.BtnValidacionDNI, "Ubicar la existencia del tipo y número de documento de identidad");
+            this.BtnValidacionDNI.UseVisualStyleBackColor = true;
+            this.BtnValidacionDNI.Click += new System.EventHandler(this.btnIntegracionSiteds_Click);
             // 
             // label12
             // 
@@ -428,6 +428,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.btnUbigeoNacimiento.Name = "btnUbigeoNacimiento";
             this.btnUbigeoNacimiento.Size = new System.Drawing.Size(28, 26);
             this.btnUbigeoNacimiento.TabIndex = 29;
+            this.ttMensaje.SetToolTip(this.btnUbigeoNacimiento, "Obtener el ubigeo del lugar de nacimiento del paciente");
             this.btnUbigeoNacimiento.UseVisualStyleBackColor = true;
             this.btnUbigeoNacimiento.Click += new System.EventHandler(this.btnUbigeoNacimiento_Click);
             // 
@@ -512,6 +513,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.btnUbigeoDomicilio.Name = "btnUbigeoDomicilio";
             this.btnUbigeoDomicilio.Size = new System.Drawing.Size(28, 26);
             this.btnUbigeoDomicilio.TabIndex = 33;
+            this.ttMensaje.SetToolTip(this.btnUbigeoDomicilio, "Obtener el ubigeo del domicilio actual del paciente");
             this.btnUbigeoDomicilio.UseVisualStyleBackColor = true;
             this.btnUbigeoDomicilio.Click += new System.EventHandler(this.btnUbigeoDomicilio_Click);
             // 
@@ -552,6 +554,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(28, 26);
             this.button3.TabIndex = 32;
+            this.ttMensaje.SetToolTip(this.button3, "Elimine la imagen de reconocimiento del paciente");
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -566,6 +569,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(28, 26);
             this.button2.TabIndex = 31;
+            this.ttMensaje.SetToolTip(this.button2, "Agregue una imagen para el reconocimiento posterior de una paciente");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -721,7 +725,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // cboOcupacion
             // 
-            this.cboOcupacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboOcupacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboOcupacion.ForeColor = System.Drawing.Color.Black;
             this.cboOcupacion.FormattingEnabled = true;
@@ -743,7 +746,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // 
             // cboGrupoSanguineo
             // 
-            this.cboGrupoSanguineo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGrupoSanguineo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGrupoSanguineo.ForeColor = System.Drawing.Color.Black;
             this.cboGrupoSanguineo.FormattingEnabled = true;
@@ -863,12 +865,14 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(783, 578);
+            this.btnCancelar.Location = new System.Drawing.Point(766, 578);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(102, 26);
+            this.btnCancelar.Size = new System.Drawing.Size(113, 27);
             this.btnCancelar.TabIndex = 38;
-            this.btnCancelar.Text = "    Cerrar";
+            this.btnCancelar.Text = "    Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMensaje.SetToolTip(this.btnCancelar, "Cancelar y cerrar formulario");
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -881,12 +885,14 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(672, 578);
+            this.btnGuardar.Location = new System.Drawing.Point(648, 578);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(102, 26);
+            this.btnGuardar.Size = new System.Drawing.Size(113, 27);
             this.btnGuardar.TabIndex = 37;
-            this.btnGuardar.Text = "     Guardar";
+            this.btnGuardar.Text = "  Aceptar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMensaje.SetToolTip(this.btnGuardar, "Aceptar y guardar");
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -895,7 +901,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.cboImprimir);
             this.panel1.Controls.Add(this.groupBox7);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.panel2);
@@ -906,23 +911,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             this.panel1.Size = new System.Drawing.Size(903, 616);
             this.panel1.TabIndex = 39;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // cboImprimir
-            // 
-            this.cboImprimir.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cboImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cboImprimir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cboImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboImprimir.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.cboImprimir.Image = ((System.Drawing.Image)(resources.GetObject("cboImprimir.Image")));
-            this.cboImprimir.Location = new System.Drawing.Point(545, 578);
-            this.cboImprimir.Name = "cboImprimir";
-            this.cboImprimir.Size = new System.Drawing.Size(121, 26);
-            this.cboImprimir.TabIndex = 43;
-            this.cboImprimir.Text = "   Imprimir Filiación";
-            this.cboImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cboImprimir.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -960,6 +948,11 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             // errValidator
             // 
             this.errValidator.ContainerControl = this;
+            // 
+            // ttMensaje
+            // 
+            this.ttMensaje.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttMensaje.ToolTipTitle = ".:: Información del evento";
             // 
             // frmNuevoHistoriaClinica
             // 
@@ -1035,7 +1028,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pctFoto;
-        private System.Windows.Forms.Button btnIntegracionSiteds;
+        private System.Windows.Forms.Button BtnValidacionDNI;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtEdad;
@@ -1075,10 +1068,10 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblHistoriaClinica;
-        private System.Windows.Forms.Button cboImprimir;
         private System.Windows.Forms.TextBox txtNacimiento;
         private System.Windows.Forms.TextBox txtdomicilio;
         private System.Windows.Forms.ErrorProvider errValidator;
-        private System.Windows.Forms.Button btnSiteds;
+        private System.Windows.Forms.Button BtnIntegracionSiteds;
+        private System.Windows.Forms.ToolTip ttMensaje;
     }
 }
