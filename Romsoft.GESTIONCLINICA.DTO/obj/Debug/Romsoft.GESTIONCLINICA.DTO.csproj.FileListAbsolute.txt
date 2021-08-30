@@ -113,3 +113,15 @@ D:\04. Software\Romsoft\GIT\FrontEnd\RomsoftFrontEnd2021\Romsoft.GESTIONCLINICA.
 D:\04. Software\Romsoft\GIT\FrontEnd\RomsoftFrontEnd2021\Romsoft.GESTIONCLINICA.DTO\obj\Debug\Romsoft.GESTIONCLINICA.DTO.csproj.CopyComplete
 D:\04. Software\Romsoft\GIT\FrontEnd\RomsoftFrontEnd2021\Romsoft.GESTIONCLINICA.DTO\obj\Debug\Romsoft.GESTIONCLINICA.DTO.dll
 D:\04. Software\Romsoft\GIT\FrontEnd\RomsoftFrontEnd2021\Romsoft.GESTIONCLINICA.DTO\obj\Debug\Romsoft.GESTIONCLINICA.DTO.pdb
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\bin\Debug\AutoMapper.Net4.dll
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\bin\Debug\Romsoft.GESTIONCLINICA.DTO.dll
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\bin\Debug\Romsoft.GESTIONCLINICA.DTO.pdb
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\bin\Debug\AutoMapper.dll
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\bin\Debug\Romsoft.GESTIONCLINICA.Entidades.dll
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\bin\Debug\Romsoft.GESTIONCLINICA.Entidades.pdb
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\bin\Debug\AutoMapper.xml
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\obj\Debug\Romsoft.GESTIONCLINICA.DTO.csproj.AssemblyReference.cache
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\obj\Debug\Romsoft.GESTIONCLINICA.DTO.csproj.CoreCompileInputs.cache
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\obj\Debug\Romsoft.GESTIONCLINICA.DTO.csproj.CopyComplete
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\obj\Debug\Romsoft.GESTIONCLINICA.DTO.dll
+C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.DTO\obj\Debug\Romsoft.GESTIONCLINICA.DTO.pdb

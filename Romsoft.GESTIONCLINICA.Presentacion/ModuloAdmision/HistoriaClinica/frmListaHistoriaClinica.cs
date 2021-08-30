@@ -240,6 +240,16 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             }
         }
 
+        private void BtnOrdenes_Click(object sender, EventArgs e)
+        {
+            OrdenServicio.frmNuevoOrdenServicio frm = new OrdenServicio.frmNuevoOrdenServicio();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                // 0 = Consulta Todos
+                //    InitialLoad(0);
+            }
+        }
+
 
         //private void BtnAtencion_Click(object sender, EventArgs e)
         //{
