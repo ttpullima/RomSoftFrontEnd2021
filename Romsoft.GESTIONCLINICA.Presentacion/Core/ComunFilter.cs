@@ -63,6 +63,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.Core
         // paciente
         public static int f_id_paciente { get; set; }
         public static int f_NumHistoriaClinica { get; set; }
+        public static string f_NombrePaciente { get; set; }
 
         //datos Ubigeo
         public static int f_tipoUbigeo { get; set; }

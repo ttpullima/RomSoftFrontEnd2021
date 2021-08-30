@@ -92,3 +92,12 @@ C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.Common\obj\Debug\Romsoft.GESTIONC
 C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.Common\obj\Debug\Romsoft.GESTIONCLINICA.Common.csproj.CopyComplete
 C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.Common\obj\Debug\Romsoft.GESTIONCLINICA.Common.dll
 C:\ROMSOFT\FrontEnd2021\Romsoft.GESTIONCLINICA.Common\obj\Debug\Romsoft.GESTIONCLINICA.Common.pdb
+D:\04. Software\Romsoft\GIT\Front\Romsoft.GESTIONCLINICA.Common\bin\Debug\Romsoft.GESTIONCLINICA.Common.dll
+D:\04. Software\Romsoft\GIT\Front\Romsoft.GESTIONCLINICA.Common\bin\Debug\Romsoft.GESTIONCLINICA.Common.pdb
+D:\04. Software\Romsoft\GIT\Front\Romsoft.GESTIONCLINICA.Common\bin\Debug\Romsoft.GESTIONCLINICA.Entidades.dll
+D:\04. Software\Romsoft\GIT\Front\Romsoft.GESTIONCLINICA.Common\bin\Debug\Romsoft.GESTIONCLINICA.Entidades.pdb
+D:\04. Software\Romsoft\GIT\Front\Romsoft.GESTIONCLINICA.Common\obj\Debug\Romsoft.GESTIONCLINICA.Common.csprojAssemblyReference.cache
+D:\04. Software\Romsoft\GIT\Front\Romsoft.GESTIONCLINICA.Common\obj\Debug\Romsoft.GESTIONCLINICA.Common.csproj.CoreCompileInputs.cache
+D:\04. Software\Romsoft\GIT\Front\Romsoft.GESTIONCLINICA.Common\obj\Debug\Romsoft.GESTIONCLINICA.Common.csproj.CopyComplete
+D:\04. Software\Romsoft\GIT\Front\Romsoft.GESTIONCLINICA.Common\obj\Debug\Romsoft.GESTIONCLINICA.Common.dll
+D:\04. Software\Romsoft\GIT\Front\Romsoft.GESTIONCLINICA.Common\obj\Debug\Romsoft.GESTIONCLINICA.Common.pdb

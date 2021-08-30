@@ -159,6 +159,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         {
             if (dgvListaPaciente.Rows.Count > 0)
             {
+                dgvAtenciones.Rows.Clear();
+
                 // Captura Id_Paciente y Num HClinica
                 ComunFilter.f_id_paciente = Convert.ToInt32(dgvListaPaciente.CurrentRow.Cells[0].Value.ToString()); //id_paciente
                 ComunFilter.f_NumHistoriaClinica = Convert.ToInt32(dgvListaPaciente.CurrentRow.Cells[1].Value.ToString()); //N° Historia Clinica
@@ -214,12 +216,19 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
 
         private void dgvAtenciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            ComunFilter.f_NumHistoriaClinica = 0;
+            ComunFilter.f_NombrePaciente = "";
+
             if (dgvAtenciones.Rows.Count > 0)
             {
                 // Captura Id_Paciente y Num HClinica
                 ComunFilter.f_idAtencion = Convert.ToInt32(dgvAtenciones.CurrentRow.Cells[11].Value.ToString()); //id_atencion
 
 
+                ComunFilter.f_NumHistoriaClinica = Convert.ToInt32(dgvAtenciones.CurrentRow.Cells[3].Value.ToString());
+                ComunFilter.f_NombrePaciente = Convert.ToString(dgvAtenciones.CurrentRow.Cells[4].Value.ToString());
+
+                BtnOrdenes.Enabled = true;
 
                 // Ventana Atenciones
                 if (dgvAtenciones.CurrentCell.ColumnIndex == 10)
@@ -242,13 +251,21 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
 
         private void BtnOrdenes_Click(object sender, EventArgs e)
         {
-            // Hola
-            OrdenServicio.frmNuevoOrdenServicio frm = new OrdenServicio.frmNuevoOrdenServicio();
-            if (frm.ShowDialog() == DialogResult.OK)
+            if(ComunFilter.f_idAtencion == 0)
             {
-                // 0 = Consulta Todos
-                //    InitialLoad(0);
+                Mensaje.ShowMessageAlert(this.ParentForm, "OrdenServicio", "Tiene que seleccionar una atención");
             }
+            else
+            {
+                
+                OrdenServicio.frmNuevoOrdenServicio frm = new OrdenServicio.frmNuevoOrdenServicio();
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    // 0 = Consulta Todos
+                    //    InitialLoad(0);
+                }
+            }
+            
         }
 
 

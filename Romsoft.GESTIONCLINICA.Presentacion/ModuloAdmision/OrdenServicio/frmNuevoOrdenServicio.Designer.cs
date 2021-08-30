@@ -32,6 +32,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNuevoOrdenServicio));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnProfesional = new System.Windows.Forms.Button();
+            this.BtnCoaseguro = new System.Windows.Forms.Button();
             this.BtnAnular = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
@@ -44,21 +46,42 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.label12 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.CboMoneda = new System.Windows.Forms.ComboBox();
+            this.TxtCoaseguroFarmacia = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.TxtCoaseguro = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.TxtCopago = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.CboTipoPaciente = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.CboTipoAtencion = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCtaCte = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNumHistoria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombrePaciente = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TipoSegus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coaseguro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Autorizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profesional = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CboEspecialidad = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CboMedico = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.CboBeneficio = new System.Windows.Forms.ComboBox();
@@ -72,29 +95,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTituloUuario = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
-            this.label57 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.CboMoneda = new System.Windows.Forms.ComboBox();
-            this.TxtCoaseguroFarmacia = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.TxtCoaseguro = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.TxtCopago = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.BtnCoaseguro = new System.Windows.Forms.Button();
-            this.TipoSegus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coaseguro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Autorizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profesional = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnProfesional = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -133,6 +133,42 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.panel1.Size = new System.Drawing.Size(1152, 605);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // BtnProfesional
+            // 
+            this.BtnProfesional.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.BtnProfesional.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnProfesional.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BtnProfesional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProfesional.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProfesional.ForeColor = System.Drawing.Color.Black;
+            this.BtnProfesional.Image = ((System.Drawing.Image)(resources.GetObject("BtnProfesional.Image")));
+            this.BtnProfesional.Location = new System.Drawing.Point(1050, 72);
+            this.BtnProfesional.Name = "BtnProfesional";
+            this.BtnProfesional.Size = new System.Drawing.Size(95, 26);
+            this.BtnProfesional.TabIndex = 147;
+            this.BtnProfesional.Text = " Profesional";
+            this.BtnProfesional.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMensaje.SetToolTip(this.BtnProfesional, "Agregar nuevos gastos a la prefacturación");
+            this.BtnProfesional.UseVisualStyleBackColor = false;
+            // 
+            // BtnCoaseguro
+            // 
+            this.BtnCoaseguro.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.BtnCoaseguro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCoaseguro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BtnCoaseguro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCoaseguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCoaseguro.ForeColor = System.Drawing.Color.Black;
+            this.BtnCoaseguro.Image = ((System.Drawing.Image)(resources.GetObject("BtnCoaseguro.Image")));
+            this.BtnCoaseguro.Location = new System.Drawing.Point(1050, 40);
+            this.BtnCoaseguro.Name = "BtnCoaseguro";
+            this.BtnCoaseguro.Size = new System.Drawing.Size(95, 26);
+            this.BtnCoaseguro.TabIndex = 146;
+            this.BtnCoaseguro.Text = " Coaseguro";
+            this.BtnCoaseguro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ttMensaje.SetToolTip(this.BtnCoaseguro, "Agregar nuevos gastos a la prefacturación");
+            this.BtnCoaseguro.UseVisualStyleBackColor = false;
             // 
             // BtnAnular
             // 
@@ -294,16 +330,16 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.groupBox2.Controls.Add(this.label34);
             this.groupBox2.Controls.Add(this.TxtCopago);
             this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.comboBox6);
+            this.groupBox2.Controls.Add(this.CboTipoPaciente);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.CboTipoAtencion);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txtCtaCte);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtNumHistoria);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtNombrePaciente);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(11, 33);
             this.groupBox2.Name = "groupBox2";
@@ -312,15 +348,123 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Paciente";
             // 
-            // comboBox6
+            // label57
             // 
-            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.ForeColor = System.Drawing.Color.Black;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(19, 79);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(180, 21);
-            this.comboBox6.TabIndex = 138;
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.Gray;
+            this.label57.Location = new System.Drawing.Point(434, 124);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(15, 13);
+            this.label57.TabIndex = 149;
+            this.label57.Text = "%";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Gray;
+            this.label35.Location = new System.Drawing.Point(314, 124);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(15, 13);
+            this.label35.TabIndex = 148;
+            this.label35.Text = "%";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.Gray;
+            this.label41.Location = new System.Drawing.Point(19, 105);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(49, 13);
+            this.label41.TabIndex = 147;
+            this.label41.Text = "Moneda:";
+            // 
+            // CboMoneda
+            // 
+            this.CboMoneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboMoneda.ForeColor = System.Drawing.Color.Black;
+            this.CboMoneda.FormattingEnabled = true;
+            this.CboMoneda.Location = new System.Drawing.Point(22, 120);
+            this.CboMoneda.Name = "CboMoneda";
+            this.CboMoneda.Size = new System.Drawing.Size(103, 21);
+            this.CboMoneda.TabIndex = 146;
+            // 
+            // TxtCoaseguroFarmacia
+            // 
+            this.TxtCoaseguroFarmacia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCoaseguroFarmacia.ForeColor = System.Drawing.Color.Black;
+            this.TxtCoaseguroFarmacia.Location = new System.Drawing.Point(330, 120);
+            this.TxtCoaseguroFarmacia.Name = "TxtCoaseguroFarmacia";
+            this.TxtCoaseguroFarmacia.Size = new System.Drawing.Size(103, 20);
+            this.TxtCoaseguroFarmacia.TabIndex = 145;
+            this.TxtCoaseguroFarmacia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.Gray;
+            this.label38.Location = new System.Drawing.Point(330, 104);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(107, 13);
+            this.label38.TabIndex = 144;
+            this.label38.Text = "Coaseguro Farmacia:";
+            // 
+            // TxtCoaseguro
+            // 
+            this.TxtCoaseguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCoaseguro.ForeColor = System.Drawing.Color.Black;
+            this.TxtCoaseguro.Location = new System.Drawing.Point(208, 120);
+            this.TxtCoaseguro.Name = "TxtCoaseguro";
+            this.TxtCoaseguro.Size = new System.Drawing.Size(105, 20);
+            this.TxtCoaseguro.TabIndex = 143;
+            this.TxtCoaseguro.Text = "0.00";
+            this.TxtCoaseguro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Gray;
+            this.label34.Location = new System.Drawing.Point(206, 105);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(107, 13);
+            this.label34.TabIndex = 142;
+            this.label34.Text = "Coaseguro Servicios:";
+            // 
+            // TxtCopago
+            // 
+            this.TxtCopago.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCopago.ForeColor = System.Drawing.Color.Black;
+            this.TxtCopago.Location = new System.Drawing.Point(132, 120);
+            this.TxtCopago.Name = "TxtCopago";
+            this.TxtCopago.Size = new System.Drawing.Size(73, 20);
+            this.TxtCopago.TabIndex = 141;
+            this.TxtCopago.Text = "0.00";
+            this.TxtCopago.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Gray;
+            this.label23.Location = new System.Drawing.Point(129, 105);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(47, 13);
+            this.label23.TabIndex = 140;
+            this.label23.Text = "Copago:";
+            // 
+            // CboTipoPaciente
+            // 
+            this.CboTipoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboTipoPaciente.ForeColor = System.Drawing.Color.Black;
+            this.CboTipoPaciente.FormattingEnabled = true;
+            this.CboTipoPaciente.Location = new System.Drawing.Point(19, 79);
+            this.CboTipoPaciente.Name = "CboTipoPaciente";
+            this.CboTipoPaciente.Size = new System.Drawing.Size(180, 21);
+            this.CboTipoPaciente.TabIndex = 138;
             // 
             // label8
             // 
@@ -333,15 +477,15 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.label8.TabIndex = 139;
             this.label8.Text = "Tipo Paciente:";
             // 
-            // comboBox3
+            // CboTipoAtencion
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.Black;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(205, 79);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(227, 21);
-            this.comboBox3.TabIndex = 129;
+            this.CboTipoAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboTipoAtencion.ForeColor = System.Drawing.Color.Black;
+            this.CboTipoAtencion.FormattingEnabled = true;
+            this.CboTipoAtencion.Location = new System.Drawing.Point(205, 79);
+            this.CboTipoAtencion.Name = "CboTipoAtencion";
+            this.CboTipoAtencion.Size = new System.Drawing.Size(227, 21);
+            this.CboTipoAtencion.TabIndex = 129;
             // 
             // label6
             // 
@@ -365,12 +509,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.label5.TabIndex = 133;
             this.label5.Text = "Cuenta Corriente:";
             // 
-            // textBox3
+            // txtCtaCte
             // 
-            this.textBox3.Location = new System.Drawing.Point(99, 37);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 132;
+            this.txtCtaCte.Location = new System.Drawing.Point(99, 37);
+            this.txtCtaCte.Name = "txtCtaCte";
+            this.txtCtaCte.Size = new System.Drawing.Size(100, 20);
+            this.txtCtaCte.TabIndex = 132;
             // 
             // label4
             // 
@@ -383,12 +527,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.label4.TabIndex = 131;
             this.label4.Text = "Historia Clínica:";
             // 
-            // textBox2
+            // txtNumHistoria
             // 
-            this.textBox2.Location = new System.Drawing.Point(19, 37);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(74, 20);
-            this.textBox2.TabIndex = 130;
+            this.txtNumHistoria.Location = new System.Drawing.Point(19, 37);
+            this.txtNumHistoria.Name = "txtNumHistoria";
+            this.txtNumHistoria.Size = new System.Drawing.Size(74, 20);
+            this.txtNumHistoria.TabIndex = 130;
             // 
             // label3
             // 
@@ -401,12 +545,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.label3.TabIndex = 129;
             this.label3.Text = "Nombre Paciente:";
             // 
-            // textBox1
+            // txtNombrePaciente
             // 
-            this.textBox1.Location = new System.Drawing.Point(205, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(336, 20);
-            this.textBox1.TabIndex = 119;
+            this.txtNombrePaciente.Location = new System.Drawing.Point(205, 37);
+            this.txtNombrePaciente.Name = "txtNombrePaciente";
+            this.txtNombrePaciente.Size = new System.Drawing.Size(336, 20);
+            this.txtNombrePaciente.TabIndex = 119;
             // 
             // dataGridView1
             // 
@@ -429,11 +573,75 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.dataGridView1.Size = new System.Drawing.Size(1136, 371);
             this.dataGridView1.TabIndex = 114;
             // 
+            // TipoSegus
+            // 
+            this.TipoSegus.HeaderText = "Clasificación";
+            this.TipoSegus.Name = "TipoSegus";
+            this.TipoSegus.Width = 75;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 60;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 270;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.Width = 60;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 60;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.Width = 80;
+            // 
+            // Paciente
+            // 
+            this.Paciente.HeaderText = "Paciente";
+            this.Paciente.Name = "Paciente";
+            this.Paciente.Width = 60;
+            // 
+            // Coaseguro
+            // 
+            this.Coaseguro.HeaderText = "Coaseguro";
+            this.Coaseguro.Name = "Coaseguro";
+            this.Coaseguro.Width = 60;
+            // 
+            // Autorizacion
+            // 
+            this.Autorizacion.HeaderText = "Autorización";
+            this.Autorizacion.Name = "Autorizacion";
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha Atención";
+            this.Fecha.Name = "Fecha";
+            // 
+            // Profesional
+            // 
+            this.Profesional.HeaderText = "Profesional Médico";
+            this.Profesional.Name = "Profesional";
+            this.Profesional.Width = 160;
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.CboEspecialidad);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.CboMedico);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.CboBeneficio);
@@ -449,15 +657,15 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Economicos:";
             // 
-            // comboBox2
+            // CboEspecialidad
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Black;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(256, 120);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(136, 21);
-            this.comboBox2.TabIndex = 127;
+            this.CboEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboEspecialidad.ForeColor = System.Drawing.Color.Black;
+            this.CboEspecialidad.FormattingEnabled = true;
+            this.CboEspecialidad.Location = new System.Drawing.Point(256, 120);
+            this.CboEspecialidad.Name = "CboEspecialidad";
+            this.CboEspecialidad.Size = new System.Drawing.Size(136, 21);
+            this.CboEspecialidad.TabIndex = 127;
             // 
             // label2
             // 
@@ -470,15 +678,15 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.label2.TabIndex = 128;
             this.label2.Text = "Especialidad";
             // 
-            // comboBox1
+            // CboMedico
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(19, 120);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(232, 21);
-            this.comboBox1.TabIndex = 125;
+            this.CboMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboMedico.ForeColor = System.Drawing.Color.Black;
+            this.CboMedico.FormattingEnabled = true;
+            this.CboMedico.Location = new System.Drawing.Point(19, 120);
+            this.CboMedico.Name = "CboMedico";
+            this.CboMedico.Size = new System.Drawing.Size(232, 21);
+            this.CboMedico.TabIndex = 125;
             // 
             // label1
             // 
@@ -630,214 +838,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.ttMensaje.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.ttMensaje.ToolTipTitle = ".:: Información del evento";
             // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.Gray;
-            this.label57.Location = new System.Drawing.Point(434, 124);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(15, 13);
-            this.label57.TabIndex = 149;
-            this.label57.Text = "%";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.Gray;
-            this.label35.Location = new System.Drawing.Point(314, 124);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(15, 13);
-            this.label35.TabIndex = 148;
-            this.label35.Text = "%";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.Gray;
-            this.label41.Location = new System.Drawing.Point(19, 105);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(49, 13);
-            this.label41.TabIndex = 147;
-            this.label41.Text = "Moneda:";
-            // 
-            // CboMoneda
-            // 
-            this.CboMoneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CboMoneda.ForeColor = System.Drawing.Color.Black;
-            this.CboMoneda.FormattingEnabled = true;
-            this.CboMoneda.Location = new System.Drawing.Point(22, 120);
-            this.CboMoneda.Name = "CboMoneda";
-            this.CboMoneda.Size = new System.Drawing.Size(103, 21);
-            this.CboMoneda.TabIndex = 146;
-            // 
-            // TxtCoaseguroFarmacia
-            // 
-            this.TxtCoaseguroFarmacia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCoaseguroFarmacia.ForeColor = System.Drawing.Color.Black;
-            this.TxtCoaseguroFarmacia.Location = new System.Drawing.Point(330, 120);
-            this.TxtCoaseguroFarmacia.Name = "TxtCoaseguroFarmacia";
-            this.TxtCoaseguroFarmacia.Size = new System.Drawing.Size(103, 20);
-            this.TxtCoaseguroFarmacia.TabIndex = 145;
-            this.TxtCoaseguroFarmacia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.Gray;
-            this.label38.Location = new System.Drawing.Point(330, 104);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(107, 13);
-            this.label38.TabIndex = 144;
-            this.label38.Text = "Coaseguro Farmacia:";
-            // 
-            // TxtCoaseguro
-            // 
-            this.TxtCoaseguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCoaseguro.ForeColor = System.Drawing.Color.Black;
-            this.TxtCoaseguro.Location = new System.Drawing.Point(208, 120);
-            this.TxtCoaseguro.Name = "TxtCoaseguro";
-            this.TxtCoaseguro.Size = new System.Drawing.Size(105, 20);
-            this.TxtCoaseguro.TabIndex = 143;
-            this.TxtCoaseguro.Text = "0.00";
-            this.TxtCoaseguro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.Gray;
-            this.label34.Location = new System.Drawing.Point(206, 105);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(107, 13);
-            this.label34.TabIndex = 142;
-            this.label34.Text = "Coaseguro Servicios:";
-            // 
-            // TxtCopago
-            // 
-            this.TxtCopago.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCopago.ForeColor = System.Drawing.Color.Black;
-            this.TxtCopago.Location = new System.Drawing.Point(132, 120);
-            this.TxtCopago.Name = "TxtCopago";
-            this.TxtCopago.Size = new System.Drawing.Size(73, 20);
-            this.TxtCopago.TabIndex = 141;
-            this.TxtCopago.Text = "0.00";
-            this.TxtCopago.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Gray;
-            this.label23.Location = new System.Drawing.Point(129, 105);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(47, 13);
-            this.label23.TabIndex = 140;
-            this.label23.Text = "Copago:";
-            // 
-            // BtnCoaseguro
-            // 
-            this.BtnCoaseguro.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.BtnCoaseguro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCoaseguro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BtnCoaseguro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCoaseguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCoaseguro.ForeColor = System.Drawing.Color.Black;
-            this.BtnCoaseguro.Image = ((System.Drawing.Image)(resources.GetObject("BtnCoaseguro.Image")));
-            this.BtnCoaseguro.Location = new System.Drawing.Point(1050, 40);
-            this.BtnCoaseguro.Name = "BtnCoaseguro";
-            this.BtnCoaseguro.Size = new System.Drawing.Size(95, 26);
-            this.BtnCoaseguro.TabIndex = 146;
-            this.BtnCoaseguro.Text = " Coaseguro";
-            this.BtnCoaseguro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMensaje.SetToolTip(this.BtnCoaseguro, "Agregar nuevos gastos a la prefacturación");
-            this.BtnCoaseguro.UseVisualStyleBackColor = false;
-            // 
-            // TipoSegus
-            // 
-            this.TipoSegus.HeaderText = "Clasificación";
-            this.TipoSegus.Name = "TipoSegus";
-            this.TipoSegus.Width = 75;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 60;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 270;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 60;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 60;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.Width = 80;
-            // 
-            // Paciente
-            // 
-            this.Paciente.HeaderText = "Paciente";
-            this.Paciente.Name = "Paciente";
-            this.Paciente.Width = 60;
-            // 
-            // Coaseguro
-            // 
-            this.Coaseguro.HeaderText = "Coaseguro";
-            this.Coaseguro.Name = "Coaseguro";
-            this.Coaseguro.Width = 60;
-            // 
-            // Autorizacion
-            // 
-            this.Autorizacion.HeaderText = "Autorización";
-            this.Autorizacion.Name = "Autorizacion";
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha Atención";
-            this.Fecha.Name = "Fecha";
-            // 
-            // Profesional
-            // 
-            this.Profesional.HeaderText = "Profesional Médico";
-            this.Profesional.Name = "Profesional";
-            this.Profesional.Width = 160;
-            // 
-            // BtnProfesional
-            // 
-            this.BtnProfesional.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.BtnProfesional.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnProfesional.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BtnProfesional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnProfesional.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnProfesional.ForeColor = System.Drawing.Color.Black;
-            this.BtnProfesional.Image = ((System.Drawing.Image)(resources.GetObject("BtnProfesional.Image")));
-            this.BtnProfesional.Location = new System.Drawing.Point(1050, 72);
-            this.BtnProfesional.Name = "BtnProfesional";
-            this.BtnProfesional.Size = new System.Drawing.Size(95, 26);
-            this.BtnProfesional.TabIndex = 147;
-            this.BtnProfesional.Text = " Profesional";
-            this.BtnProfesional.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ttMensaje.SetToolTip(this.BtnProfesional, "Agregar nuevos gastos a la prefacturación");
-            this.BtnProfesional.UseVisualStyleBackColor = false;
-            // 
             // frmNuevoOrdenServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -848,6 +848,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.Name = "frmNuevoOrdenServicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNuevoOrdenServicio";
+            this.Load += new System.EventHandler(this.frmNuevoOrdenServicio_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -880,17 +881,17 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox CboTipoAtencion;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCtaCte;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNumHistoria;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtNombrePaciente;
+        private System.Windows.Forms.ComboBox CboEspecialidad;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CboMedico;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox CboBeneficio;
@@ -902,7 +903,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox CboTipoPaciente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button BtnAnular;
         private System.Windows.Forms.Button BtnProfesional;
