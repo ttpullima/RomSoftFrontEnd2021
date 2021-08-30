@@ -30,6 +30,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
 
         private void btnFacturar_Click(object sender, EventArgs e)
         {
+            // Hola    
             frmPrefacturacion frm = new frmPrefacturacion();
 
             if (frm.ShowDialog() == DialogResult.OK)

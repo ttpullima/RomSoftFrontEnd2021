@@ -242,6 +242,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
 
         private void BtnOrdenes_Click(object sender, EventArgs e)
         {
+            // Hola
             OrdenServicio.frmNuevoOrdenServicio frm = new OrdenServicio.frmNuevoOrdenServicio();
             if (frm.ShowDialog() == DialogResult.OK)
             {
