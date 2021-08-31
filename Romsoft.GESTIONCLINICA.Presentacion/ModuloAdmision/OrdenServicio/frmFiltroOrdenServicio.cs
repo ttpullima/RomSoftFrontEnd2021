@@ -76,6 +76,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
         {
             return new CVN_TARIFARIO_SEGUS_PRICEReqDTO
             {
+                id_categoria_pago = ComunFilter.ft_categoriapago,
                 valor = txtValor.Text.Trim(),
                 c_idioma="E"
             };
@@ -89,26 +90,25 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
                 //this.estadoActual = EstadoActual.Normal;
 
                 string message = "";
-                foreach (DataGridViewRow row in dataGridView1.Rows)
-                {
-                    bool isSelected = Convert.ToBoolean(row.Cells["Valida"].Value);
-                    if (isSelected)
-                    {
-                        message ="Seleccion";
-                        //message += row.Cells["Name"].Value.ToString();
+                //foreach (DataGridViewRow row in dataGridView1.Rows)
+                //{
 
-                        ComunFilter.ft_codigo = row.Cells[1].Value.ToString();
-                        ComunFilter.ft_descripcion = row.Cells[2].Value.ToString();
-                        ComunFilter.ft_clasificacion = row.Cells[3].Value.ToString();
-                        ComunFilter.ft_precio = Convert.ToDecimal(row.Cells[4].Value.ToString());
-                        ComunFilter.ft_cantidad = Convert.ToInt32(row.Cells[5].Value.ToString());
-                        ComunFilter.ft_total = (ComunFilter.ft_precio * ComunFilter.ft_cantidad);
+                //    if (this.dataGridView1.SelectedRows.Count > 0)
+                //    {
+                //        ComunFilter.ft_codigo = row.Cells[1].Value.ToString();
+                //        ComunFilter.ft_descripcion = row.Cells[2].Value.ToString();
+                //        ComunFilter.ft_clasificacion = row.Cells[3].Value.ToString();
+                //        ComunFilter.ft_precio = Convert.ToDecimal(row.Cells[4].Value.ToString());
+                //        ComunFilter.ft_cantidad = Convert.ToInt32(row.Cells[5].Value.ToString());
+                //        ComunFilter.ft_total = (ComunFilter.ft_precio * ComunFilter.ft_cantidad);
 
-                    }
+                //        message = "Seleccion";
+                //    }
 
-                }
+                //}
+                message = "Seleccion";
 
-                if(message!="")
+                if (message!="")
                 {
                     DialogResult = DialogResult.OK;
 
@@ -126,24 +126,24 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //try
-            //{
-            //    if (dataGridView1.Rows.Count > 0)
-            //    {
-            //        //ComunFilter.ft_codigo = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            //        //ComunFilter.ft_descripcion = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            //        //ComunFilter.ft_clasificacion = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            //        //ComunFilter.ft_precio = Convert.ToDecimal(dataGridView1.CurrentRow.Cells[4].Value.ToString());
-            //        //ComunFilter.ft_cantidad = Convert.ToInt32(dataGridView1.CurrentRow.Cells[5].Value.ToString());
-            //        //ComunFilter.ft_total = (ComunFilter.ft_precio * ComunFilter.ft_cantidad);
+            try
+            {
+                if (dataGridView1.Rows.Count > 0)
+                {
+                    ComunFilter.ft_codigo = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                    ComunFilter.ft_descripcion = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                    ComunFilter.ft_clasificacion = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                    ComunFilter.ft_precio = Convert.ToDecimal(dataGridView1.CurrentRow.Cells[4].Value.ToString());
+                    ComunFilter.ft_cantidad = Convert.ToInt32(dataGridView1.CurrentRow.Cells[5].Value.ToString());
+                    ComunFilter.ft_total = (ComunFilter.ft_precio * ComunFilter.ft_cantidad);
 
-            //    }
-            //}
+                }
+            }
 
-            //catch (Exception ex)
-            //{
-            //    Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
-            //}
+            catch (Exception ex)
+            {
+                Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
+            }
         }
 
         private void txtValor_KeyPress(object sender, KeyPressEventArgs e)

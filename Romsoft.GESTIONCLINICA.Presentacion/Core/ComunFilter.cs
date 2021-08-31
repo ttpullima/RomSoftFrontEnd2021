@@ -50,6 +50,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.Core
         public static decimal ft_precio { get; set; }
         public static int ft_cantidad { get; set; }
         public static decimal ft_total { get; set; }
+        public static int ft_categoriapago { get; set; }
+
         //Ctategoria Papgo
 
         //plan de seguro

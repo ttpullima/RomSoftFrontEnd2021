@@ -372,11 +372,26 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             ComunFilter.ft_precio = 0;
             ComunFilter.ft_cantidad = 0;
             ComunFilter.ft_total = 0;
+            ComunFilter.ft_categoriapago = 0;
+
+            ComunFilter.ft_categoriapago = Convert.ToInt32(CboCategoriaPago.SelectedValue);
+
+            decimal Totalpaciente = 0;
+            decimal PorcentajeCoaseguro = Convert.ToDecimal(TxtCoaseguro.Text);
+
 
             OrdenServicio.frmFiltroOrdenServicio frm = new OrdenServicio.frmFiltroOrdenServicio();
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                dgvOrdenServicio.Rows.Add(ComunFilter.ft_clasificacion, ComunFilter.ft_codigo, ComunFilter.ft_descripcion, ComunFilter.ft_precio, ComunFilter.ft_cantidad, ComunFilter.ft_total, ComunFilter.ft_total,Convert.ToDecimal(TxtCoaseguro.Text),9999,DateTime.Now);
+                if(PorcentajeCoaseguro >= 100)
+                {
+                    Totalpaciente = Convert.ToDecimal(ComunFilter.ft_total);
+                }
+                else
+                {
+                    Totalpaciente =  (ComunFilter.ft_total * PorcentajeCoaseguro / 100 );
+                }
+                dgvOrdenServicio.Rows.Add(ComunFilter.ft_clasificacion, ComunFilter.ft_codigo, ComunFilter.ft_descripcion, ComunFilter.ft_precio, ComunFilter.ft_cantidad, ComunFilter.ft_total, Totalpaciente, Convert.ToDecimal(TxtCoaseguro.Text),9999,DateTime.Now);
 
             }
 
@@ -392,12 +407,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
                 decimal Paciente = 0;
                 decimal coaseguro = 0;
 
+
                 foreach (DataGridViewRow row in dgvOrdenServicio.Rows)
                 {
                     if (row.Cells["Total"].Value != null)
                         suma += (decimal)row.Cells["Total"].Value;
                 }
-                txtTotal.Text = suma.ToString();
+                txtTotal.Text = suma.ToString("0,0.00");
 
                 //paciente
                 foreach (DataGridViewRow row in dgvOrdenServicio.Rows)
@@ -405,15 +421,21 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
                     if (row.Cells["Paciente"].Value != null)
                         Paciente += (decimal)row.Cells["Paciente"].Value;
                 }
-                txtPaciente.Text = Paciente.ToString();
+                txtPaciente.Text = Paciente.ToString("0,0.00");
 
                 //paciente
-                foreach (DataGridViewRow row in dgvOrdenServicio.Rows)
-                {
-                    if (row.Cells["Coaseguro"].Value != null)
-                        coaseguro += (decimal)row.Cells["Coaseguro"].Value;
-                }
-                txtSeguro.Text = coaseguro.ToString();
+                //foreach (DataGridViewRow row in dgvOrdenServicio.Rows)
+                //{
+                //    if (row.Cells["Coaseguro"].Value != null)
+                //        coaseguro += (decimal)row.Cells["Coaseguro"].Value;
+                //}
+                //txtSeguro.Text = coaseguro.ToString();
+
+                decimal total1 = Convert.ToDecimal(txtTotal.Text);
+                decimal paciente1 = Convert.ToDecimal(txtPaciente.Text);
+
+                decimal Seguro1 = total1 - paciente1;
+                txtSeguro.Text = Seguro1.ToString("0,0.00");
             }
             catch (Exception ex)
             {

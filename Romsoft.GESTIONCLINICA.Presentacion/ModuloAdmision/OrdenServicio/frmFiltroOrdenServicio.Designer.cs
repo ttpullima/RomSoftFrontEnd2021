@@ -38,20 +38,19 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ETTarifario = new System.Windows.Forms.BindingSource(this.components);
             this.txtValor = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errValidator = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ETTarifario = new System.Windows.Forms.BindingSource(this.components);
             this.id_tarifario_segus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Clasificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valida = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idtarifariosegusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ccodigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tdescripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,10 +62,10 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ETTarifario)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errValidator)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ETTarifario)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -182,7 +181,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.Clasificacion,
             this.Precio,
             this.Cantidad,
-            this.Valida,
             this.idtarifariosegusDataGridViewTextBoxColumn,
             this.ccodigoDataGridViewTextBoxColumn,
             this.tdescripcionDataGridViewTextBoxColumn,
@@ -195,9 +193,15 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.dataGridView1.DataSource = this.ETTarifario;
             this.dataGridView1.Location = new System.Drawing.Point(11, 96);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(705, 165);
             this.dataGridView1.TabIndex = 51;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // ETTarifario
+            // 
+            this.ETTarifario.DataSource = typeof(Romsoft.GESTIONCLINICA.DTO.TABLAS.CVN_TARIFARIO_SEGUS.CVN_TARIFARIO_SEGUS_PRICEDTO);
             // 
             // txtValor
             // 
@@ -251,15 +255,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             // 
             this.errValidator.ContainerControl = this;
             // 
-            // ETTarifario
-            // 
-            this.ETTarifario.DataSource = typeof(Romsoft.GESTIONCLINICA.DTO.TABLAS.CVN_TARIFARIO_SEGUS.CVN_TARIFARIO_SEGUS_PRICEDTO);
-            // 
             // id_tarifario_segus
             // 
             this.id_tarifario_segus.DataPropertyName = "id_tarifario_segus";
             this.id_tarifario_segus.HeaderText = "Id";
             this.id_tarifario_segus.Name = "id_tarifario_segus";
+            this.id_tarifario_segus.ReadOnly = true;
             this.id_tarifario_segus.Visible = false;
             // 
             // Codigo
@@ -267,6 +268,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.Codigo.DataPropertyName = "c_codigo";
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
             this.Codigo.Width = 60;
             // 
             // Descripcion
@@ -274,6 +276,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.Descripcion.DataPropertyName = "t_descripcion";
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
             this.Descripcion.Width = 250;
             // 
             // Clasificacion
@@ -281,6 +284,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.Clasificacion.DataPropertyName = "t_clasificacion_segus";
             this.Clasificacion.HeaderText = "Clasificación";
             this.Clasificacion.Name = "Clasificacion";
+            this.Clasificacion.ReadOnly = true;
             this.Clasificacion.Width = 150;
             // 
             // Precio
@@ -288,6 +292,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.Precio.DataPropertyName = "Precio";
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
             this.Precio.Width = 80;
             // 
             // Cantidad
@@ -295,19 +300,15 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.Cantidad.DataPropertyName = "cantidad";
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 80;
-            // 
-            // Valida
-            // 
-            this.Valida.HeaderText = "";
-            this.Valida.Name = "Valida";
-            this.Valida.Width = 40;
             // 
             // idtarifariosegusDataGridViewTextBoxColumn
             // 
             this.idtarifariosegusDataGridViewTextBoxColumn.DataPropertyName = "id_tarifario_segus";
             this.idtarifariosegusDataGridViewTextBoxColumn.HeaderText = "id_tarifario_segus";
             this.idtarifariosegusDataGridViewTextBoxColumn.Name = "idtarifariosegusDataGridViewTextBoxColumn";
+            this.idtarifariosegusDataGridViewTextBoxColumn.ReadOnly = true;
             this.idtarifariosegusDataGridViewTextBoxColumn.Visible = false;
             // 
             // ccodigoDataGridViewTextBoxColumn
@@ -315,6 +316,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.ccodigoDataGridViewTextBoxColumn.DataPropertyName = "c_codigo";
             this.ccodigoDataGridViewTextBoxColumn.HeaderText = "c_codigo";
             this.ccodigoDataGridViewTextBoxColumn.Name = "ccodigoDataGridViewTextBoxColumn";
+            this.ccodigoDataGridViewTextBoxColumn.ReadOnly = true;
             this.ccodigoDataGridViewTextBoxColumn.Visible = false;
             // 
             // tdescripcionDataGridViewTextBoxColumn
@@ -322,6 +324,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.tdescripcionDataGridViewTextBoxColumn.DataPropertyName = "t_descripcion";
             this.tdescripcionDataGridViewTextBoxColumn.HeaderText = "t_descripcion";
             this.tdescripcionDataGridViewTextBoxColumn.Name = "tdescripcionDataGridViewTextBoxColumn";
+            this.tdescripcionDataGridViewTextBoxColumn.ReadOnly = true;
             this.tdescripcionDataGridViewTextBoxColumn.Visible = false;
             // 
             // tobservacionDataGridViewTextBoxColumn
@@ -329,6 +332,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.tobservacionDataGridViewTextBoxColumn.DataPropertyName = "t_observacion";
             this.tobservacionDataGridViewTextBoxColumn.HeaderText = "t_observacion";
             this.tobservacionDataGridViewTextBoxColumn.Name = "tobservacionDataGridViewTextBoxColumn";
+            this.tobservacionDataGridViewTextBoxColumn.ReadOnly = true;
             this.tobservacionDataGridViewTextBoxColumn.Visible = false;
             // 
             // precioDataGridViewTextBoxColumn
@@ -336,6 +340,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
             this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             this.precioDataGridViewTextBoxColumn.Visible = false;
             // 
             // cantidadDataGridViewTextBoxColumn
@@ -343,6 +348,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
             this.cantidadDataGridViewTextBoxColumn.HeaderText = "cantidad";
             this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
             this.cantidadDataGridViewTextBoxColumn.Visible = false;
             // 
             // idclasificacionsegusDataGridViewTextBoxColumn
@@ -350,6 +356,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.idclasificacionsegusDataGridViewTextBoxColumn.DataPropertyName = "id_clasificacion_segus";
             this.idclasificacionsegusDataGridViewTextBoxColumn.HeaderText = "id_clasificacion_segus";
             this.idclasificacionsegusDataGridViewTextBoxColumn.Name = "idclasificacionsegusDataGridViewTextBoxColumn";
+            this.idclasificacionsegusDataGridViewTextBoxColumn.ReadOnly = true;
             this.idclasificacionsegusDataGridViewTextBoxColumn.Visible = false;
             // 
             // tclasificacionsegusDataGridViewTextBoxColumn
@@ -357,6 +364,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.tclasificacionsegusDataGridViewTextBoxColumn.DataPropertyName = "t_clasificacion_segus";
             this.tclasificacionsegusDataGridViewTextBoxColumn.HeaderText = "t_clasificacion_segus";
             this.tclasificacionsegusDataGridViewTextBoxColumn.Name = "tclasificacionsegusDataGridViewTextBoxColumn";
+            this.tclasificacionsegusDataGridViewTextBoxColumn.ReadOnly = true;
             this.tclasificacionsegusDataGridViewTextBoxColumn.Visible = false;
             // 
             // estadoDataGridViewTextBoxColumn
@@ -364,6 +372,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
             this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
             this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
             this.estadoDataGridViewTextBoxColumn.Visible = false;
             // 
             // frmFiltroOrdenServicio
@@ -378,11 +387,11 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ETTarifario)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errValidator)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ETTarifario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,7 +418,6 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
         private System.Windows.Forms.DataGridViewTextBoxColumn Clasificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Valida;
         private System.Windows.Forms.DataGridViewTextBoxColumn idtarifariosegusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ccodigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tdescripcionDataGridViewTextBoxColumn;
