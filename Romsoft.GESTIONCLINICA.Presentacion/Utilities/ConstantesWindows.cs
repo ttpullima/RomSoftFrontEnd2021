@@ -49,6 +49,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.Utilities
         public static string WS_CVN_TARIFARIO_SEGUS_Update = ConfigurationManager.AppSettings["WS_CVN_TARIFARIO_SEGUS_Update"];
         public static string WS_CVN_TARIFARIO_SEGUS_GetAllActives = ConfigurationManager.AppSettings["WS_CVN_TARIFARIO_SEGUS_GetAllActives"];
         public static string WS_CVN_TARIFARIO_SEGUS_GetById = ConfigurationManager.AppSettings["WS_CVN_TARIFARIO_SEGUS_GetById"];
+        public static string WS_CVN_TARIFARIO_SEGUS_GetPrice = ConfigurationManager.AppSettings["WS_CVN_TARIFARIO_SEGUS_GetPrice"];
 
 
         //Clasificacion SEGUS

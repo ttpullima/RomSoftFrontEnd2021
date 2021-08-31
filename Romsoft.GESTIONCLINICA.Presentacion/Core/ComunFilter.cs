@@ -42,6 +42,14 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.Core
         public static string cp_t_descripcion { get; set; }
         public static decimal cp_n_precio_sol { get; set; }
         public static decimal cp_n_precio_usd { get; set; }
+
+        //Tarifado segus Price
+        public static string ft_clasificacion { get; set; }
+        public static string ft_codigo { get; set; }
+        public static string ft_descripcion { get; set; }
+        public static decimal ft_precio { get; set; }
+        public static int ft_cantidad { get; set; }
+        public static decimal ft_total { get; set; }
         //Ctategoria Papgo
 
         //plan de seguro

@@ -90,11 +90,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
                 }
                 else if (jsonResponse.Warning)
                 {
+                    Cursor.Current = Cursors.Default;
                     Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
                 }
             }
             catch (Exception ex)
             {
+                Cursor.Current = Cursors.Default;
                 Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
             }
         }
@@ -116,11 +118,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
                 }
                 else if (jsonResponse.Warning)
                 {
+                    Cursor.Current = Cursors.Default;
                     Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
                 }
             }
             catch (Exception ex)
             {
+                Cursor.Current = Cursors.Default;
                 Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
             }
         }
@@ -142,11 +146,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
                 }
                 else if (jsonResponse.Warning)
                 {
+                    Cursor.Current = Cursors.Default;
                     Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
                 }
             }
             catch (Exception ex)
             {
+                Cursor.Current = Cursors.Default;
                 Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
             }
         }
@@ -168,11 +174,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
                 }
                 else if (jsonResponse.Warning)
                 {
+                    Cursor.Current = Cursors.Default;
                     Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
                 }
             }
             catch (Exception ex)
             {
+                Cursor.Current = Cursors.Default;
                 Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
             }
         }
@@ -194,11 +202,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
                 }
                 else if (jsonResponse.Warning)
                 {
+                    Cursor.Current = Cursors.Default;
                     Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
                 }
             }
             catch (Exception ex)
             {
+                Cursor.Current = Cursors.Default;
                 Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
             }
         }
@@ -220,11 +230,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
                 }
                 else if (jsonResponse.Warning)
                 {
+                    Cursor.Current = Cursors.Default;
                     Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
                 }
             }
             catch (Exception ex)
             {
+                Cursor.Current = Cursors.Default;
                 Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
             }
         }
@@ -246,11 +258,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
                 }
                 else if (jsonResponse.Warning)
                 {
+                    Cursor.Current = Cursors.Default;
                     Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
                 }
             }
             catch (Exception ex)
             {
+                Cursor.Current = Cursors.Default;
                 Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
             }
         }
@@ -274,11 +288,13 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
                 }
                 else if (jsonResponse.Warning)
                 {
+                    Cursor.Current = Cursors.Default;
                     Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
                 }
             }
             catch (Exception ex)
             {
+                Cursor.Current = Cursors.Default;
                 Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
             }
         }
@@ -321,6 +337,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             }
             else if (jsonResponse.Warning)
             {
+                Cursor.Current = Cursors.Default;
                 Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, jsonResponse.Message);
             }
 
@@ -330,6 +347,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
      
         private void frmNuevoOrdenServicio_Load_1(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.Default;
+
             CargarComboTipoPaciente();
             CargarComboTipoAtencion();
             CargarComboPlanSeguro();
@@ -340,6 +359,80 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             CargarComboMoneda();
             //
             GetDatosAtencion(ComunFilter.f_idAtencion);
+
+            Cursor.Current = Cursors.Default;
+
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            ComunFilter.ft_codigo = "";
+            ComunFilter.ft_descripcion = "";
+            ComunFilter.ft_clasificacion = "";
+            ComunFilter.ft_precio = 0;
+            ComunFilter.ft_cantidad = 0;
+            ComunFilter.ft_total = 0;
+
+            OrdenServicio.frmFiltroOrdenServicio frm = new OrdenServicio.frmFiltroOrdenServicio();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                dgvOrdenServicio.Rows.Add(ComunFilter.ft_clasificacion, ComunFilter.ft_codigo, ComunFilter.ft_descripcion, ComunFilter.ft_precio, ComunFilter.ft_cantidad, ComunFilter.ft_total, ComunFilter.ft_total,Convert.ToDecimal(TxtCoaseguro.Text),9999,DateTime.Now);
+
+            }
+
+            //Totales
+            calculaTotales();
+        }
+
+        private void calculaTotales()
+        {
+            try
+            {
+                decimal suma = 0;
+                decimal Paciente = 0;
+                decimal coaseguro = 0;
+
+                foreach (DataGridViewRow row in dgvOrdenServicio.Rows)
+                {
+                    if (row.Cells["Total"].Value != null)
+                        suma += (decimal)row.Cells["Total"].Value;
+                }
+                txtTotal.Text = suma.ToString();
+
+                //paciente
+                foreach (DataGridViewRow row in dgvOrdenServicio.Rows)
+                {
+                    if (row.Cells["Paciente"].Value != null)
+                        Paciente += (decimal)row.Cells["Paciente"].Value;
+                }
+                txtPaciente.Text = Paciente.ToString();
+
+                //paciente
+                foreach (DataGridViewRow row in dgvOrdenServicio.Rows)
+                {
+                    if (row.Cells["Coaseguro"].Value != null)
+                        coaseguro += (decimal)row.Cells["Coaseguro"].Value;
+                }
+                txtSeguro.Text = coaseguro.ToString();
+            }
+            catch (Exception ex)
+            {
+                txtTotal.Text = "0.00";
+                txtPaciente.Text = "0.00";
+                TxtCoaseguro.Text = "0.00";
+            }
+
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvOrdenServicio.SelectedRows.Count > 0)
+            {
+                dgvOrdenServicio.Rows.RemoveAt(this.dgvOrdenServicio.SelectedRows[0].Index);
+
+            }
+            //Totales
+            calculaTotales();
         }
     }
 }

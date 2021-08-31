@@ -253,6 +253,29 @@
   <metadata name="Profesional.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="BtnCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        bwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD1SURBVDhPrZO9
+        DgFBFIWHtyC6TWzjKaxQImFXotFY0XkBiTdSiBadXqHd1YhsiYiG495h186iYBQnN5Pc8839mREAVHWt
+        PNzSCD1rAtfaop67oGnsYJsLtAvlZP7zIEQKbnFAphMJkaqZp2pZwDHHlJtWAWzulqaK8R0gVMMIQsgd
+        cL/51cx6B2BxJRIge1bLvgw7QL8SAa62gfOwpQK4HZoJ3U4DS5gPQYDTciYhbN6uV/D9zSvEMefiMe0I
+        wCY27/dHGdnseRsZGaYAaDtUAa0qDkhAPppZtOI/APRb0B2i9hq1HxIDtJ9yCPn5M8X11XeGuAFQxpyF
+        BaJEsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="BtnGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        bwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFSSURBVDhPpZO/
+        T8JAFMdP/xj/FP8KqVAlQmiJDu4XY0RnE3StqKnBxIE4OUiFRfEHiwNK2hgTUCJpIMbNPO9detcetoMy
+        fJo2ed9P7727IwCgUGjQuaJDabFOa6ZDe1ol/Z2xs296NV/Xa+b8ZH30Zca8oqss9MUAwYKVCjnQQD/N
+        nxGgs4oAw4ZDz6PBWEFA2l4eCAkXBH/+FUbiBAiuhAuwZ1aoLDuKCGjWIiwdZUMJtsNmQnBgcUEBFqcs
+        De46D/DkdmHlOCclmWrukgTTloG1xqYiEGHPe4Gu50LBNkIB2x3CinqieON6F16HfSi3K/ybrQ5uO/cy
+        bJyYMozgFiuCUmsP3v0P8EcjJjmEC7eZGJaCyRa2mWTgD2E8/uQkhRHeQtwQd1r7XPLYf04MI3yISdu4
+        dVOG9WYpNsgR2zj1QQoe0x1lIfn3ZYryt+sM5Ac0UJhruKFRRQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="TipoSegus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -286,29 +309,6 @@
   <metadata name="Profesional.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="BtnCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        bwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD1SURBVDhPrZO9
-        DgFBFIWHtyC6TWzjKaxQImFXotFY0XkBiTdSiBadXqHd1YhsiYiG495h186iYBQnN5Pc8839mREAVHWt
-        PNzSCD1rAtfaop67oGnsYJsLtAvlZP7zIEQKbnFAphMJkaqZp2pZwDHHlJtWAWzulqaK8R0gVMMIQsgd
-        cL/51cx6B2BxJRIge1bLvgw7QL8SAa62gfOwpQK4HZoJ3U4DS5gPQYDTciYhbN6uV/D9zSvEMefiMe0I
-        wCY27/dHGdnseRsZGaYAaDtUAa0qDkhAPppZtOI/APRb0B2i9hq1HxIDtJ9yCPn5M8X11XeGuAFQxpyF
-        BaJEsQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="BtnGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        bwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFSSURBVDhPpZO/
-        T8JAFMdP/xj/FP8KqVAlQmiJDu4XY0RnE3StqKnBxIE4OUiFRfEHiwNK2hgTUCJpIMbNPO9detcetoMy
-        fJo2ed9P7727IwCgUGjQuaJDabFOa6ZDe1ol/Z2xs296NV/Xa+b8ZH30Zca8oqss9MUAwYKVCjnQQD/N
-        nxGgs4oAw4ZDz6PBWEFA2l4eCAkXBH/+FUbiBAiuhAuwZ1aoLDuKCGjWIiwdZUMJtsNmQnBgcUEBFqcs
-        De46D/DkdmHlOCclmWrukgTTloG1xqYiEGHPe4Gu50LBNkIB2x3CinqieON6F16HfSi3K/ybrQ5uO/cy
-        bJyYMozgFiuCUmsP3v0P8EcjJjmEC7eZGJaCyRa2mWTgD2E8/uQkhRHeQtwQd1r7XPLYf04MI3yISdu4
-        dVOG9WYpNsgR2zj1QQoe0x1lIfn3ZYryt+sM5Ac0UJhruKFRRQAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA

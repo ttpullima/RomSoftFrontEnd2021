@@ -39,12 +39,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnFacturar = new System.Windows.Forms.Button();
             this.BtnImprimir = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSeguro = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPaciente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label57 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.txtNumHistoria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombrePaciente = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvOrdenServicio = new System.Windows.Forms.DataGridView();
             this.TipoSegus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,7 +97,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenServicio)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -114,14 +114,14 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.panel1.Controls.Add(this.BtnAgregar);
             this.panel1.Controls.Add(this.BtnFacturar);
             this.panel1.Controls.Add(this.BtnImprimir);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txtSeguro);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtPaciente);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvOrdenServicio);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Controls.Add(this.BtnGuardar);
@@ -206,6 +206,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMensaje.SetToolTip(this.BtnEliminar, "Eliminar Gastos de la Prefacturación");
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnAgregar
             // 
@@ -224,6 +225,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ttMensaje.SetToolTip(this.BtnAgregar, "Agregar nuevos gastos a la prefacturación");
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // BtnFacturar
             // 
@@ -264,12 +266,16 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.ttMensaje.SetToolTip(this.BtnImprimir, "Imprimir orden de servicio en el caso este cubierto al 100%");
             this.BtnImprimir.UseVisualStyleBackColor = false;
             // 
-            // textBox6
+            // txtSeguro
             // 
-            this.textBox6.Location = new System.Drawing.Point(292, 570);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(74, 20);
-            this.textBox6.TabIndex = 139;
+            this.txtSeguro.Enabled = false;
+            this.txtSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeguro.Location = new System.Drawing.Point(292, 570);
+            this.txtSeguro.Name = "txtSeguro";
+            this.txtSeguro.Size = new System.Drawing.Size(74, 20);
+            this.txtSeguro.TabIndex = 139;
+            this.txtSeguro.Text = "0.00";
+            this.txtSeguro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label13
             // 
@@ -282,12 +288,16 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.label13.TabIndex = 138;
             this.label13.Text = "Seguro";
             // 
-            // textBox5
+            // txtPaciente
             // 
-            this.textBox5.Location = new System.Drawing.Point(170, 570);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(74, 20);
-            this.textBox5.TabIndex = 137;
+            this.txtPaciente.Enabled = false;
+            this.txtPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaciente.Location = new System.Drawing.Point(170, 570);
+            this.txtPaciente.Name = "txtPaciente";
+            this.txtPaciente.Size = new System.Drawing.Size(74, 20);
+            this.txtPaciente.TabIndex = 137;
+            this.txtPaciente.Text = "0.00";
+            this.txtPaciente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label11
             // 
@@ -311,12 +321,16 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.label12.TabIndex = 135;
             this.label12.Text = "Total";
             // 
-            // textBox4
+            // txtTotal
             // 
-            this.textBox4.Location = new System.Drawing.Point(41, 570);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(74, 20);
-            this.textBox4.TabIndex = 134;
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(41, 570);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(74, 20);
+            this.txtTotal.TabIndex = 134;
+            this.txtTotal.Text = "0.00";
+            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // groupBox2
             // 
@@ -511,6 +525,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             // 
             // txtCtaCte
             // 
+            this.txtCtaCte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCtaCte.Location = new System.Drawing.Point(99, 37);
             this.txtCtaCte.Name = "txtCtaCte";
             this.txtCtaCte.Size = new System.Drawing.Size(100, 20);
@@ -529,6 +544,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             // 
             // txtNumHistoria
             // 
+            this.txtNumHistoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumHistoria.Location = new System.Drawing.Point(19, 37);
             this.txtNumHistoria.Name = "txtNumHistoria";
             this.txtNumHistoria.Size = new System.Drawing.Size(74, 20);
@@ -547,16 +563,18 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             // 
             // txtNombrePaciente
             // 
+            this.txtNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombrePaciente.Location = new System.Drawing.Point(205, 37);
             this.txtNombrePaciente.Name = "txtNombrePaciente";
             this.txtNombrePaciente.Size = new System.Drawing.Size(336, 20);
             this.txtNombrePaciente.TabIndex = 119;
             // 
-            // dataGridView1
+            // dgvOrdenServicio
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvOrdenServicio.AllowUserToAddRows = false;
+            this.dgvOrdenServicio.AllowUserToOrderColumns = true;
+            this.dgvOrdenServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrdenServicio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipoSegus,
             this.Codigo,
             this.Descripcion,
@@ -568,10 +586,12 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.Autorizacion,
             this.Fecha,
             this.Profesional});
-            this.dataGridView1.Location = new System.Drawing.Point(11, 189);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1136, 371);
-            this.dataGridView1.TabIndex = 114;
+            this.dgvOrdenServicio.Location = new System.Drawing.Point(11, 189);
+            this.dgvOrdenServicio.MultiSelect = false;
+            this.dgvOrdenServicio.Name = "dgvOrdenServicio";
+            this.dgvOrdenServicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrdenServicio.Size = new System.Drawing.Size(1136, 371);
+            this.dgvOrdenServicio.TabIndex = 114;
             // 
             // TipoSegus
             // 
@@ -853,7 +873,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenServicio)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -872,15 +892,15 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.OrdenServicio
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvOrdenServicio;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BtnImprimir;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtSeguro;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPaciente;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.ComboBox CboTipoAtencion;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

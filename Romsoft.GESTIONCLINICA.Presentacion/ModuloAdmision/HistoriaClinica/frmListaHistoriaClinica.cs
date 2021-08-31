@@ -140,6 +140,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             }
             catch (Exception ex)
             {
+                Cursor.Current = Cursors.Default;
                 Mensaje.ShowMessageAlert(this.ParentForm, ConstantesWindows.TituloMensaje, ex.Message);
             }
         }
@@ -159,6 +160,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
         {
             if (dgvListaPaciente.Rows.Count > 0)
             {
+                Cursor.Current = Cursors.WaitCursor;
+
                 dgvAtenciones.Rows.Clear();
 
                 // Captura Id_Paciente y Num HClinica
@@ -169,6 +172,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
                 // Ventana Atenciones
                 if (dgvListaPaciente.CurrentCell.ColumnIndex == 11)
                 {
+                    Cursor.Current = Cursors.Default;
                     //ComunFilter.f_id_paciente = Convert.ToInt32(dgvListaPaciente.CurrentRow.Cells[0].Value.ToString()); //id_paciente
                     //ComunFilter.f_NumHistoriaClinica = Convert.ToInt32(dgvListaPaciente.CurrentRow.Cells[1].Value.ToString()); //N° Historia Clinica
 
@@ -185,6 +189,7 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
                 // Editar Paciente
                 if (dgvListaPaciente.CurrentCell.ColumnIndex == 12)
                 {
+                    Cursor.Current = Cursors.Default;
                     //ComunFilter.f_id_paciente = Convert.ToInt32(dgvListaPaciente.CurrentRow.Cells[0].Value.ToString()); //id_paciente
                     //ComunFilter.f_NumHistoriaClinica = Convert.ToInt32(dgvListaPaciente.CurrentRow.Cells[1].Value.ToString()); //N° Historia Clinica
 
@@ -257,7 +262,8 @@ namespace Romsoft.GESTIONCLINICA.Presentacion.ModuloAdmision.HistoriaClinica
             }
             else
             {
-                
+                Cursor.Current = Cursors.WaitCursor;
+
                 OrdenServicio.frmNuevoOrdenServicio frm = new OrdenServicio.frmNuevoOrdenServicio();
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
